@@ -38,16 +38,21 @@ module.exports = {
                 collapseWhitespace: false, // 折叠空白区域
             },
         }),
-        // new CopyWebpackPlugin({
-        //     patterns: [
-        //         {
-        //             // 定义要拷贝的源目录
-        //             from: path.resolve(__dirname, 'public'),
-        //             // 定义要拷贝到的目标目录
-        //             to: path.resolve(__dirname, 'dist'),
-        //         },
-        //     ],
-        // }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    // 定义要拷贝的源目录
+                    from: path.resolve(__dirname, 'public'),
+                    // 定义要拷贝到的目标目录
+                    to: path.resolve(__dirname, 'dist'),
+                    globOptions: {
+                        dot: true,
+                        gitignore: true,
+                        ignore: [ '**/index.html' ],
+                    },
+                },
+            ],
+        }),
     ],
 
     // 用来设置引用模块
