@@ -14,13 +14,43 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
+
+        // 告诉 webpack 不使用箭头函数
+        environment: {
+            arrowFunction: false,
+        },
     },
 
     module: {
         rules: [
             {
                 test: /\.ts$/,
-                use: 'ts-loader',
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: [
+                                [
+                                    '@babel/preset-env',
+                                    {
+                                        targets: {
+                                            "chrome": "60",
+                                            "firefox": "60",
+                                            "ie": "9",
+                                            "safari": "10",
+                                            "edge": "17"
+                                        },
+                                        // 指定 corejs 版本
+                                        corejs: '3',
+                                        // 使用 corejs 的方式 按需加载
+                                        useBuiltIns: 'usage',
+                                    }
+                                ]
+                            ]
+                        }
+                    },
+                    'ts-loader'
+                ],
                 exclude: /node_modules/
             }
         ]
