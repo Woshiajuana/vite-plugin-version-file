@@ -1,23 +1,12 @@
-
+"use strict";
 class Person {
-
-    name: string;
-
-    age: number;
-
-    static nickname = '哇哈哈';
-
-    readonly avatar = 'xxx';
-
-    constructor (name: string, age: number) {
+    constructor(name, age) {
         this.name = name;
         this.age = age;
     }
-
 }
-
+Person.nickname = '哇哈哈';
 console.log(Person.nickname);
-
 Person.nickname = '1';
-
 console.log(Person.nickname);
+//# sourceMappingURL=index.js.map
