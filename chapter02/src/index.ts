@@ -1,4 +1,6 @@
 
+import './index.scss'
+
 class Person {
 
     name: string;
