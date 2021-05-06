@@ -44,3 +44,9 @@ fun2().then(() => {
 }).finally(() => {
     console.log('finally2')
 });
+
+
+enum Days {Sun, Mon, Tue, Wed, Thu, Fri, Sat}
+
+console.log(Days.Fri);
+console.log(Days[0]);
