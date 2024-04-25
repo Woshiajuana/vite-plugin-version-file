@@ -1,5 +1,3 @@
 export const x = {
-  xx: 'xx'
-
-  
+  xx: 'xx',
 }
