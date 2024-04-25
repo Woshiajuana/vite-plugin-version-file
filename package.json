@@ -4,13 +4,27 @@
   "description": "vite 打包生成版本文件",
   "main": "dist/index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo 1",
+    "release": "npm run build && dsc publish -t"
   },
-  "keywords": ["vite", "plugin", "version", "file"],
+  "keywords": [
+    "vite",
+    "plugin",
+    "version",
+    "file"
+  ],
   "files": [
     "dist"
   ],
   "author": "woshiajuana <979703986@qq.com>",
   "license": "MIT",
-  "homepage": "https://github.com/Woshiajuana/vite-plugin-version-file#readme"
+  "homepage": "https://github.com/Woshiajuana/vite-plugin-version-file#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Woshiajuana/vite-plugin-version-file.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
