@@ -1,0 +1,16 @@
+{
+  "name": "vite-plugin-version-file",
+  "version": "0.0.1",
+  "description": "vite 打包生成版本文件",
+  "main": "dist/index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["vite", "plugin", "version", "file"],
+  "files": [
+    "dist"
+  ],
+  "author": "woshiajuana <979703986@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/Woshiajuana/vite-plugin-version-file#readme"
+}
