@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "jsx": "preserve",
+    "strict": true,
+    "target": "ES2015",
+    "module": "CommonJS",
+    "skipLibCheck": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "outDir": "./lib"
+  },
+  "include": [
+    "src/**/*.ts",
+  ],
+  "exclude": ["node_modules"]
+}
