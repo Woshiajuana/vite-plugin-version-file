@@ -14,6 +14,7 @@
   },
   "include": [
     "src/**/*.ts",
+    "tsup.config.ts"
   ],
   "exclude": ["node_modules"]
 }

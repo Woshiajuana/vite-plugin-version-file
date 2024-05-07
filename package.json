@@ -2,12 +2,23 @@
   "name": "vite-plugin-version-file",
   "version": "0.0.1",
   "description": "vite 打包生成版本文件",
-  "main": "dist/index.mjs",
   "scripts": {
-    "build": "echo 1",
+    "build": "tsup",
     "release": "npm run build && dsc publish -t",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .eslintignore",
     "format": "prettier --write src/"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
   },
   "keywords": [
     "vite-plugin",
@@ -43,6 +54,7 @@
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
+    "tsup": "^8.0.2",
     "vite": "^5.2.11"
   }
 }
